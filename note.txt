@@ -1,1 +1,1 @@
-https://www.oracle.com/database/technologies/xe-prior-release-downloads.html
+https://www.oracle.com/tools/downloads/sqldev-downloads-2143.html
