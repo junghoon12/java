@@ -1,1 +1,6 @@
-https://www.oracle.com/tools/downloads/sqldev-downloads-2143.html
+
+* 오라클 데이터베이스 다운로드 사이트 주소
+  https://www.oracle.com/database/technologies/xe-prior-release-downloads.html
+
+* SqlDeveloper 다운로드 사이트 주소
+  https://www.oracle.com/tools/downloads/sqldev-downloads-2143.html
