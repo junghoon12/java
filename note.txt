@@ -1,85 +1,31 @@
-
-* 오라클 데이터베이스 다운로드 사이트 주소
-  https://www.oracle.com/database/technologies/xe-prior-release-downloads.html
-
-* SqlDeveloper 다운로드 사이트 주소
-  https://www.oracle.com/tools/downloads/sqldev-downloads-2143.html
+-- [문제1] emp 테이블에서 담당업무가 'CLERK' 인 사원의
+-- 사번, 이름, 담당업무, 급여를 화면에 보여주세요.
 
 
--- DEPT 테이블 생성
-create table dept( 
-  deptno     number(2,0), 
-  dname      varchar2(14), 
-  loc        varchar2(13), 
-  constraint pk_dept primary key (deptno) 
-);
+-- [문제2] emp 테이블에서 1982년 1월 1일 이후에 입사한
+-- 사원의 사번, 이름, 담당업무, 급여, 입사일자를 화면에 보여주세요.
 
--- EMP 테이블 생성
--- Create the EMP table which has a foreign key reference to the DEPT table.
--- The foreign key will require that the DEPTNO in the EMP table exist in the DEPTNO column in the DEPT table.
 
-create table emp( 
-  empno    number(4,0), 
-  ename    varchar2(10), 
-  job      varchar2(9), 
-  mgr      number(4,0), 
-  hiredate date, 
-  sal      number(7,2), 
-  comm     number(7,2), 
-  deptno   number(2,0), 
-  constraint pk_emp primary key (empno), 
-  constraint fk_deptno foreign key (deptno) references dept (deptno) 
-);
+-- [문제3] emp 테이블에서 급여가 1300 ~ 1500 사이인 사원의
+-- 이름과 담당업무, 급여, 부서번호를 화면에 보여주세요.
 
--- DEPT 테이블에 데이터 추가
-insert into DEPT (DEPTNO, DNAME, LOC)
-	values(10, 'ACCOUNTING', 'NEW YORK');
-insert into dept 
-	values(20, 'RESEARCH', 'DALLAS');
-insert into dept 
-	values(30, 'SALES', 'CHICAGO');
-insert into dept 
-	values(40, 'OPERATIONS', 'BOSTON');
 
--- EMP 테이블에 데이터 추가
-insert into emp 
-	values(7839, 'KING', 'PRESIDENT', null, to_date('17-11-1981','dd-mm-yyyy'), 5000, null, 10);
+-- [문제4] emp 테이블에서 사번이 7902, 7788, 7566 인 사원의
+-- 사번, 이름, 담당업무를 화면에 보여주세요.
 
-insert into emp 
-	values(7698, 'BLAKE', 'MANAGER', 7839, to_date('1-5-1981','dd-mm-yyyy'), 2850, null, 30);
 
-insert into emp 
-	values(7782, 'CLARK', 'MANAGER', 7839, to_date('9-6-1981','dd-mm-yyyy'), 2450, null, 10);
+--[문제5] emp 테이블에서 보너스가 300이거나 500이거나
+-- 1400인 사원의 모든 정보를 화면에 보여주세요.
 
-insert into emp 
-	values(7566, 'JONES', 'MANAGER', 7839, to_date('2-4-1981','dd-mm-yyyy'), 2975, null, 20);
 
-insert into emp 
-	values(7788, 'SCOTT', 'ANALYST', 7566, to_date('13-07-1987','dd-mm-yyyy') - 85, 3000, null, 20);
+-- [문제6] member 테이블에서 이름이 홍길동이면서 직업이
+-- 학생인 회원의 모든 정보를 화면에 보여주세요.
 
-insert into emp 
-	values(7902, 'FORD', 'ANALYST', 7566, to_date('3-12-1981','dd-mm-yyyy'), 3000, null, 20);
 
-insert into emp 
-	values(7369, 'SMITH', 'CLERK', 7902, to_date('17-12-1980','dd-mm-yyyy'), 800, null, 20);
+-- [문제7] products 테이블에서 제조사가 '삼성' 또는 '현대'
+-- 이면서 입고가가 100만원 이하인 상품의 상품명과 입고가 그리고
+-- 출고가를 화면에 보여주세요.
 
-insert into emp 
-	values(7499, 'ALLEN', 'SALESMAN', 7698, to_date('20-2-1981','dd-mm-yyyy'), 1600, 300, 30);
 
-insert into emp 
-	values(7521, 'WARD', 'SALESMAN', 7698, to_date('22-2-1981','dd-mm-yyyy'), 1250, 500, 30);
-
-insert into emp 
-	values(7654, 'MARTIN', 'SALESMAN', 7698, to_date('28-9-1981','dd-mm-yyyy'), 1250, 1400, 30);
-
-insert into emp 
-	values(7844, 'TURNER', 'SALESMAN', 7698, to_date('8-9-1981','dd-mm-yyyy'), 1500, 0, 30);
-
-insert into emp 
-	values(7876, 'ADAMS', 'CLERK', 7788, to_date('13-07-1987', 'dd-mm-yyyy') - 51, 1100, null, 20);
-
-insert into emp 
-	values(7900, 'JAMES', 'CLERK', 7698, to_date('3-12-1981','dd-mm-yyyy'), 950, null, 30);
-
-insert into emp 
-	values(7934, 'MILLER', 'CLERK', 7782, to_date('23-1-1982','dd-mm-yyyy'), 1300, null, 10);
+-- [문제8] emp 테이블에서 급여가 1100 이상이고, 담당업무가
+-- 'MANAGER' 인 사원의 사번, 이름, 담당업무, 급여를 화면에 보여주세요.
