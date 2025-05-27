@@ -1,2 +1,6 @@
 오라클 데이터베이스 11g XE 버전 다운로드 사이트 주소
 https://www.oracle.com/database/technologies/xe-prior-release-downloads.html
+
+
+sql developer 다운로드 사이트 주소 
+https://www.oracle.com/database/sqldeveloper/technologies/download/ 
