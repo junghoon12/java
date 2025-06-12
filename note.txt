@@ -1,16 +1,1 @@
-<!-- 페이징 처리 영역 -->
-	   <span th:if="${Paging.page > Paging.block}">
-	      <a th:href="@{board_search.go(page=1, field=${Paging.field}, keyword=${Paging.keyword})}">[맨 처음]</a>
-	   	  <a th:href="@{board_search.go(page=${Paging.startBlock - 1}, field=${Paging.field}, keyword=${Paging.keyword})}">◀</a>
-	   </span>
-	   
-	   <!-- 페이지 번호 목록 영역 -->
-	   <span th:each="i : ${#numbers.sequence(Paging.startBlock, Paging.endBlock)}">
-	      <a th:href="@{board_search.go(page=${i}, field=${Paging.field}, keyword=${Paging.keyword})}" th:text="${i}"
-	   			th:classappend="${i == Paging.page ? 'active' : ''}"></a>
-	   </span>
-	   
-	   <span th:if="${Paging.endBlock < Paging.allPage}">
-	      <a th:href="@{board_search.go(page=${Paging.endBlock + 1}, field=${Paging.field}, keyword=${Paging.keyword})}">▶</a>
-	   	  <a th:href="@{board_search.go(page=${Paging.allPage}, field=${Paging.field}, keyword=${Paging.keyword})}">[맨 마지막]</a>
-	   </span>
+
