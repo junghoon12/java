@@ -1,52 +1,16 @@
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'bootstrap.css' %}">
-   <div class="container my-3">
-       <h2 class="border-bottom py-2">{{ question.subject }}</h2>
-       <div class="card my-3">
-           <div class="card-body">
-               <div class="card-text" style="white-space: pre-line;">
-                   {{question.content }}
-               </div>
+<nav class="navbar navbar-expand-lg navbar-light bg0light border-bottom">
+        <a class="navbar-brand" href="{% url 'pybo:index' %}">Pybo</a>
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+                data-target="#navbarNav" aria-controls="navbarNav"
+                aria-expended="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-               <div class="d-flex justify-content-end">
-                    <div class="badge badge-light p-2">
-                        {{question.create_date }}
-                    </div>
-               </div>
-           </div>
-       </div>
-
-
-    <h4 class="border-bottom my-3 py-2">
-        {{ question.answer_set.count }} 개의 답변이 달렸습니다.
-    </h4>
-
-    {% for answer in question.answer_set.all %}
-
-    <div class="card my-3">
-        <div class="card-body">
-            <div class="card-text" style="white-space: pre-line;">
-                {{ answer.content }}
-            </div>
-
-            <div class="d-flex justify-content-end">
-                <div class="badge badge-light p-2">
-                    {{ answer.create_date }}
-                </div>
-            </div>
+        <div class="collapse navbar-collapse flex-grow-0" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">로그인</a>
+                </li>
+            </ul>
         </div>
-    </div>
-    {% endfor %}
-
-    <form action="{% url 'pybo:answer_create' question.id %}"
-          method="post" class="my-3">
-        {% csrf_token %}
-        <div class="form-group">
-            <textarea name="content" id="content" rows="10"
-                    class="form-control"></textarea>
-        </div>
-
-        <input type="submit" value="답변등록" class="btn btn-primary">
-    </form>
-
-   </div>
+    </nav>
