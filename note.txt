@@ -1,3 +1,4 @@
+{% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.css' %}">
    <div class="container my-3">
        <h2 class="border-bottom py-2">{{ question.subject }}</h2>
