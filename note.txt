@@ -1,5 +1,14 @@
-구글 드라이브 프로젝트 공유 사이트 주소
+* 구글 드라이브 프로젝트 공유 사이트 주소
 
-https://drive.google.com/drive/folders/1BKmkTQZn3gZpJP76zhAJdxhl0jt-ishL?usp=drive_link
+  https://drive.google.com/drive/folders/1BKmkTQZn3gZpJP76zhAJdxhl0jt-ishL?usp=drive_link
+
+* 조별로 폴더를 만들어서 해당 폴더 안에 아래 내용을 첨부해 놓을 것.
+
+* 구글 드라이브에 작성되어야 할 자료 내용
+  1. 회의록
+  2. WBS
+  3. 발표자료
+  4. 시연영상
+  5. 구조도
 
 
